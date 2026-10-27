@@ -2,3 +2,12 @@
 arn:aws:lambda:us-east-1:288263297044:function:submit_leave
 
 submitBenefits
+
+Our validation engine will confirm that the Lambda function executes successfully, creating a metadata item in the story-table DynamoDB table and also saves a story text file to the story-bucket S3 bucket.
+
+**Hints**
+
+The comment should state: Store title, uid and bucket name in DynamoDB TABLE_NAME.
+The comment should be added after the story file is saved to S3, but before the comment: # Return a success response with message.
+After entering the comment, if you do not get any suggestions, deploy your changes, wait 30 seconds, and then try again.
+If you have problems generating working code, you can copy and paste a full working version of the code stored in the file story_teller_function.txt in the Amazon S3 story-bucket.
