@@ -1,17 +1,15 @@
+Our test server will verify that you saved a prompt in Amazon Bedrock Prompt Management.
 
-arn:aws:lambda:us-east-1:288263297044:function:submit_leave
+Hints:
 
-submitBenefits
+Create the prompt in one of two ways: in the notebook DIY section or on the Amazon Bedrock console under Prompt management.
+Enter the exact name that you gave your prompt.
+Make sure the prompt has a model selected and includes your prompt text.
+To make sure the validator can read your prompt, on the Amazon Bedrock console, enter your prompt text in the User message box, NOT the System instructions field.
 
-Our validation engine will confirm that the Lambda function executes successfully, creating a metadata item in the story-table DynamoDB table and also saves a story text file to the story-bucket S3 bucket.
-
-**Hints**
-
-The comment should state: Store title, uid and bucket name in DynamoDB TABLE_NAME.
-The comment should be added after the story file is saved to S3, but before the comment: # Return a success response with message.
-After entering the comment, if you do not get any suggestions, deploy your changes, wait 30 seconds, and then try again.
-If you have problems generating working code, you can copy and paste a full working version of the code stored in the file story_teller_function.txt in the Amazon S3 story-bucket.
-
+Author a few-shot prompt that classifies the sentiment of a customer message.
+Save the prompt as a reusable managed prompt with Amazon Bedrock Prompt Management.
+Confirm your saved prompt, and then validate the challenge with your prompt name.
 
 
 import boto3
